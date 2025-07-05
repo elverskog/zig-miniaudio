@@ -18,7 +18,7 @@ pub fn build(b: *std.build.Builder) anyerror!void {
         [_][]const u8{ "play_file", "examples/play_file.zig" },
     };
 
-    for (examples) |example, i| {
+    for (examples, 0..) |example, i| {
         const name = example[0];
         const source = example[1];
 
